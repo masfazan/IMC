@@ -13,50 +13,47 @@ sexo=char.Parse(Console.ReadLine());
 imc=peso/(altura*altura);
 Console.WriteLine("O resultado é: " + imc);
 
+
 if (sexo == 'F' || sexo == 'f')
 {
-    if (imc < 19)
+    switch (imc)
     {
-        Console.WriteLine("Abaixo do peso");
-    }
-    else if (imc < 23.9)
-    {
-        Console.WriteLine("Peso normal");
-    }
-    else if (imc < 28.9)
-    {
-        Console.WriteLine("Obesidade leve");
-    }
-    else if (imc < 38.9)
-    {
-        Console.WriteLine("Obesidade moderada");
-    }
-    else
-    {
-        Console.WriteLine("Obesidade mórbida");
+        case (imc < 19):
+            Console.WriteLine("Abaixo do peso");
+            break;
+        case (imc < 23.9):
+            Console.WriteLine("Peso normal");
+            break;
+        case (imc < 28.9):
+            Console.WriteLine("Obesidade leve");
+            break;
+        case (imc < 38.9):
+            Console.WriteLine("Obesidade moderada");
+            break;
+        default:
+            Console.WriteLine("Obesidade mórbida");
+            break;
     }
 }
 else if (sexo == 'M' || sexo == 'm')
 {
-    if (imc < 20)
+    switch(imc)
     {
+        case (imc < 20):
         Console.WriteLine("Abaixo do peso");
-    }
-    else if (imc < 24.9)
-    {
+            break;
+        case (imc < 24.9):
         Console.WriteLine("Peso normal");
-    }
-   else  if (imc < 29.9)
-    {
+            break;
+        case (imc < 29.9):
         Console.WriteLine("Obesidade leve");
-    }
-    else if (imc < 39.9)
-    {
+            break;
+        case (imc < 39.9):
         Console.WriteLine("Obesidade moderada");
-    }
-    else
-    {
+            break;
+        default:
         Console.WriteLine("Obesidade mórbida");
+            break;
     }
 }
 else
